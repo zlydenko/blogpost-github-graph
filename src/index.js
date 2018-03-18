@@ -3,4 +3,6 @@ import { render } from "react-dom";
 
 import PostsCalendar from "./PostsCalendar";
 
-render(<PostsCalendar />, document.getElementById("root"));
+const rootElem = document.querySelector("#graph");
+
+render(<PostsCalendar />, rootElem);
