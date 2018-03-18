@@ -10,7 +10,6 @@ const RenderDays = () => {
 };
 
 export default class extends React.Component {
-  state = {};
   render() {
     return (
       <Wrapper>
