@@ -1,12 +1,46 @@
 import React from "react";
-import { Wrapper, Months, Weekdays, Days, Noneday } from "./styled";
+import { Wrapper, Months, Weekdays, Days, Day } from "./styled";
+import posts from "../db";
+import differenceInDays from "date-fns/difference_in_calendar_days";
+
+const filterPosts = posts => {
+  let result = new Map();
+
+  posts.map(obj => {
+    const key =
+      differenceInDays(new Date(obj.timestamp), new Date(2018, 0, 1)) + 1;
+    const counter = result.get(key);
+    if (counter === undefined) {
+      result.set(key, 1);
+    } else {
+      result.set(key, counter + 1);
+    }
+  });
+
+  return result;
+};
 
 const RenderDays = () => {
   const arr = Array(365).fill(null);
+  const postsMap = filterPosts(posts);
 
-  return arr.map(
-    (day, _) => (day === null ? <Noneday key={_} /> : <li key={_} />)
-  );
+  for (let quantity of postsMap) {
+    const key = quantity[0];
+    const val = quantity[1];
+    arr[key - 1] = val;
+  }
+
+  return arr.map((day, _) => {
+    if (day === 1) {
+      return <Day key={_} quantity="one" />;
+    } else if (day === 3) {
+      return <Day key={_} quantity="few" />;
+    } else if (day > 3) {
+      return <Day key={_} quantity="alot" />;
+    } else {
+      return <Day key={_} quantity="none" />;
+    }
+  });
 };
 
 export default class extends React.Component {
