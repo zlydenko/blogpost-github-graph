@@ -79,10 +79,10 @@ const RenderDays = props => {
 
 const PostsCalendar = props => (
   <Wrapper
-    font={props.colors.font || false}
-    border={props.colors.border || false}
-    borderColor={props.colors["border-color"] || false}
-    bg={props.colors.bg || false}
+    font={props.colors ? props.colors.font : null}
+    border={props.colors ? props.colors.border : null}
+    borderColor={props.colors ? props.colors["border-color"] : null}
+    bg={props.colors ? props.colors.bg : null}
   >
     <Months>
       <li>Jan</li>

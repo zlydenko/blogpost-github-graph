@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   grid-gap: 10px;
   padding: 20px;
 
-  border: ${props => (props.border ? "1px solid" : "none")};
+  border: ${props => (props.border === null || true ? "1px solid" : "none")};
   border-color: ${props => props.borderColor || "#e1e4e8"};
   margin: 20px;
   background-color: ${props => props.bg || "inherit"};
