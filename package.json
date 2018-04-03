@@ -3,23 +3,33 @@
   "version": "1.0.0",
   "description":
     "react component for rendering your blog articles on graph à la Github",
-  "main": "./src/index.js",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
   "scripts": {
-    "start": "parcel index.html --public-url /",
-    "build": "parcel build index.html --public-url ./"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "anton.zlydenko@gmail.com",
+  "author": {
+    "name": "Anton Zlydenko",
+    "email": "anton.zlydenko@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.7.0"
+    "webpack-cli": "^2.0.13"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "styled-components": "^3.2.3"
+    "styled-components": "^3.2.3",
+    "webpack": "^4.4.1"
   }
 }
