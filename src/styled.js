@@ -61,13 +61,4 @@ export const Days = styled.ul`
   grid-auto-columns: ${daySize}px;
 `;
 
-const colors = {
-  none: "#ebedf0",
-  one: "rgba(25, 97, 39,0.3)",
-  few: "rgba(25, 97, 39,0.8)",
-  alot: "rgba(25, 97, 39,1)"
-};
-
-export const Day = styled.li`
-  background-color: ${props => colors[props.quantity]};
-`;
+export const Day = styled.li``;
