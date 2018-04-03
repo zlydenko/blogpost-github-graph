@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: ${fontSize}px;
+  color: ${props => props.font || "black"};
   display: inline-grid;
   grid-template-areas:
     "empty months"
@@ -16,8 +17,11 @@ export const Wrapper = styled.div`
   grid-template-columns: auto 1fr;
   grid-gap: 10px;
   padding: 20px;
-  border: 1px #e1e4e8 solid;
+
+  border: ${props => (props.border ? "1px solid" : "none")};
+  border-color: ${props => props.borderColor || "#e1e4e8"};
   margin: 20px;
+  background-color: ${props => props.bg || "inherit"};
 `;
 
 export const Months = styled.ul`
