@@ -2,7 +2,7 @@
 
 Blogpost github graph — is small react component for rendering your blog articles on graph à la Github contribution chart.
 
-![basic component view](./screenshots/basic.png "basic component view")
+![basic component view](https://github.com/zlydenko/blogpost-github-graph/blob/master/screenshots/basic.png "basic component view")
 
 Just install component via npm:
 
@@ -59,7 +59,7 @@ You need specify which key is a timestamp, so tell this to component too:
 
 ## Customize colors
 
-![wowmuchstyle](./screenshots/wowmuchstyle.png "wowmuchstyle")
+![wowmuchstyle](https://github.com/zlydenko/blogpost-github-graph/blob/master/screenshots/wowmuchstyle.png "wowmuchstyle")
 
 If you want to customize graph colors, you need to pass config to your component:
 

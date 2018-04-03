@@ -1,6 +1,6 @@
 {
   "name": "blogpost-github-graph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "react component for rendering your blog articles on graph à la Github",
   "main": "build/index.js",
