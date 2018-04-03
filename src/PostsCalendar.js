@@ -22,6 +22,7 @@ const filterPosts = (posts, timestampID) => {
 const RenderDays = props => {
   const data = props.data;
   const timestampId = props.timestampId.toString();
+  const colorsConfig = props.colorsConfig || false;
   const arr = Array(365).fill(null);
   const postsMap = filterPosts(data, timestampId);
 
@@ -38,7 +39,7 @@ const RenderDays = props => {
           key={_}
           quantity="one"
           style={{
-            backgroundColor: props.colorsConfig["one"] || "rgba(25, 97, 39,0.3)"
+            backgroundColor: colorsConfig["one"] || "rgba(25, 97, 39,0.3)"
           }}
         />
       );
@@ -48,7 +49,7 @@ const RenderDays = props => {
           key={_}
           quantity="few"
           style={{
-            backgroundColor: props.colorsConfig["few"] || "rgba(25, 97, 39,0.8)"
+            backgroundColor: colorsConfig["few"] || "rgba(25, 97, 39,0.8)"
           }}
         />
       );
@@ -58,7 +59,7 @@ const RenderDays = props => {
           key={_}
           quantity="alot"
           style={{
-            backgroundColor: props.colorsConfig["alot"] || "rgba(25, 97, 39,1)"
+            backgroundColor: colorsConfig["alot"] || "rgba(25, 97, 39,1)"
           }}
         />
       );
@@ -68,7 +69,7 @@ const RenderDays = props => {
           key={_}
           quantity="none"
           style={{
-            backgroundColor: props.colorsConfig["none"] || "#ebedf0"
+            backgroundColor: colorsConfig["none"] || "#ebedf0"
           }}
         />
       );
@@ -105,7 +106,7 @@ const PostsCalendar = props => (
       <RenderDays
         data={props.data}
         timestampId={props.timestampId}
-        colorsConfig={props.colors}
+        colorsConfig={props.colors || false}
       />
     </Days>
   </Wrapper>
