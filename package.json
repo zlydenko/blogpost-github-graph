@@ -1,14 +1,15 @@
 {
-  "name": "blogpost-github-calendar",
+  "name": "blogpost-github-graph",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description":
+    "react component for rendering your blog articles on graph à la Github",
+  "main": "./src/index.js",
   "scripts": {
     "start": "parcel index.html --public-url /",
     "build": "parcel build index.html --public-url ./"
   },
   "keywords": [],
-  "author": "",
+  "author": "anton.zlydenko@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
